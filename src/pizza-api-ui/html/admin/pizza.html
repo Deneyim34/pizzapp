@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pizza Order App Admin | Dashboard</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      background-color: #f5f5f5;
+    }
+
+    #form input, #form textarea{ margin-top : 10px;}
+
+    .footer {
+      position: fixed;
+      bottom: 0px;
+      width: 100%;
+      height: 60px;
+      line-height: 60px;
+      /* Vertically center the text there */
+      background-color: #f5f5f5;
+    }
+
+
+    /* Custom page CSS
+-------------------------------------------------- */
+    /* Not required for template or sticky footer method. */
+
+
+    .footer .container {
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container" style="padding-bottom: 100px;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow mt-2 rounded">
+      <a class="navbar-brand" href="#">Pizza Order App Admin</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Dashboard <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pizzas.html">Pizza Collection</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="orders.html">Orders</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="customers.html">Customers</a>
+          </li>
+        </ul>
+
+
+        <div class="btn-group ml-auto">
+          <div class="btn-group">
+            <a type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              <i class="fa fa-user-circle" aria-hidden="true"></i>
+            </a>
+            <div class="dropdown-menu  dropdown-menu-right">
+              <a class="dropdown-item" href="profile.html"><i class="fa fa-user-cog" aria-hidden="true"></i> Account
+                Settings</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="login.html"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
+            </div>
+          </div>
+            
+        </div>
+
+      </div>
+    </nav>
+
+    <div class="card bg-light mb-3 shadow mt-4">
+      <div class="card-header h4">
+        <div class="float-left">New Pizza</div>
+        <a href="#" class="btn btn-outline-danger my-2 my-sm-0 float-right mr-2"><i class="fa fa-remove" aria-hidden="true"></i> Delete</a>
+      </div>
+      <div class="card-body pt-1">
+        <form action="" id="form">
+          <div class="row">
+            <div class="col-md-2 mt-2">
+              <div class="col-md-12"><img src="http://placehold.it/160x160" alt="" class="border rounded img-fluid"></div>
+              <div class="col-md-12">
+                <button class="btn btn-sm btn-secondary btn-block mt-4">Image</button>
+                <input type="file" id="inputImage" class="form-control roundless-input d-none mt-0" placeholder="Image" required>
+              </div>
+              
+            </div>
+            <div class="col-md-10">
+              <label for="inputName" class="sr-only">Name</label>
+              <input type="text" id="inputName" class="form-control top-input" placeholder="Name" required autofocus>
+              <label for="inputDesription" class="sr-only">Description</label>
+              <textarea type="text" id="inputDesription" class="form-control roundless-input" placeholder="Description" required></textarea>
+              <label for="inputPrice" class="sr-only">Price</label>
+              <input type="text" id="inputPrice" class="form-control roundless-input" placeholder="Price" required>
+            </div>
+          </div>
+          <button class="btn btn-lg btn-primary btn-block mt-4" type="submit">Save</button>
+        </form>
+        
+
+      </div>
+    </div>
+
+
+
+  </div>
+
+  <footer class="footer shadow">
+    <div class="container">
+      <span class="text-muted text-right">&copy;2019 Pizza Order App</span>
+    </div>
+  </footer>
+
+
+
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+  integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.12.0/js/all.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.12.0/js/v4-shims.js"></script>
+
+</html>

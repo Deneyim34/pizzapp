@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pizza Order App | Login</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      background-color: #f5f5f5;
+    }
+
+
+    textarea:hover,
+    input:hover,
+    textarea:active,
+    input:active,
+    textarea:focus,
+    select:focus,
+    select:active,
+    select:hover,
+    input:focus,
+    button:focus,
+    button:active,
+    button:hover,
+    label:focus,
+    .btn:active,
+    .btn.active {
+      outline: 0px !important;
+      -webkit-appearance: none;
+      box-shadow: none !important;
+    }
+
+    .cart-title {
+      display: inline;
+      font-weight: bold;
+    }
+
+    .checkbox.pull-right {
+      margin: 0;
+    }
+
+    .pl-ziro {
+      padding-left: 0px;
+    }
+
+
+    .footer {
+      position: fixed;
+      bottom: 0px;
+      width: 100%;
+      height: 60px;
+      line-height: 60px;
+      /* Vertically center the text there */
+      background-color: #f5f5f5;
+    }
+
+
+    /* Custom page CSS
+-------------------------------------------------- */
+    /* Not required for template or sticky footer method. */
+
+
+    .footer .container {
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container" style="padding-bottom: 100px;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow mt-2 rounded">
+      <a class="navbar-brand" href="#">Pizza Order App</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+
+
+        <div class="btn-group ml-auto">
+          <a type="button" class="btn dropdown-toggle " data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu  dropdown-menu-right p-2" style="min-width: 400px;">
+            <div class="card bg-light mb-3 shadow">
+              <div class="card-header">Cart</div>
+              <div class="card-body pb-0">
+                <div style="max-height: 240px; overflow: auto;">
+                  <table class="table">
+                    <tbody>
+                      <tr>
+                        <th scope="row" style="width: 50px;" class="align-middle"><img src="http://placehold.it/48x48"
+                            alt="" width="48" height="48" class="border rounded "></th>
+                        <td class="align-middle" style="width: 200px;">Mark</td>
+                        <td class="align-middle text-right" style="width: 100px;"> 25.00 TL </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" style="width: 50px;"><img src="http://placehold.it/48x48" alt="" width="48"
+                            height="48" class="border rounded "></th>
+                        <td class="align-middle" style="width: 200px;">Mark</td>
+                        <td class="align-middle text-right" style="width: 100px;"> 25.00 TL </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" style="width: 50px;"><img src="http://placehold.it/48x48" alt="" width="48"
+                            height="48" class="border rounded "></th>
+                        <td class="align-middle" style="width: 200px;">Mark</td>
+                        <td class="align-middle text-right" style="width: 100px;"> 25.00 TL </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <th colspan="2" class="align-middle text-right">Total Price</th>
+                      <td class="align-middle text-right" style="width: 100px;">75.00 TL</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <a href="cart.html" class="btn btn-lg btn-secondary btn-block" style="color:#f5f5f5;"><i
+                class="fa fa-check-circle"></i> Give
+              Order </a>
+          </div>
+          <div class="btn-group">
+            <a type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              <i class="fa fa-user-circle" aria-hidden="true"></i>
+            </a>
+            <div class="dropdown-menu  dropdown-menu-right">
+              <a class="dropdown-item" href="profile.html"><i class="fa fa-user-cog" aria-hidden="true"></i> Account
+                Settings</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="login.html"><i class="fa fa-sign-out" aria-hidden="true"></i> Sign Out</a>
+            </div>
+          </div>
+
+          <a href="login.html" type="button" class="btn"><i class="fa fa-sign-in" aria-hidden="true"></i> Sign In</a>
+        </div>
+
+      </div>
+    </nav>
+
+    <div class="card">
+      <h5 class="card-header">Payment Details</h5>
+      <div class="card-body">
+
+        <table id="cart" class="table table-hover table-condensed">
+          <thead>
+            <tr>
+              <th style="width:50%">Product</th>
+              <th style="width:10%">Price</th>
+              <th style="width:8%">Quantity</th>
+              <th style="width:18%" class="text-center">Subtotal</th>
+              <th style="width:14%"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-th="Product">
+                <div class="row">
+                  <div class="col-sm-3 d-none d-sm-block"><img src="http://placehold.it/100x100" alt="..."
+                      class="img-responsive" />
+                  </div>
+                  <div class="col-sm-9">
+                    <h4 class="nomargin">Product 1</h4>
+                    <p>Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                      Lorem
+                      ipsum dolor sit amet.</p>
+                  </div>
+                </div>
+              </td>
+              <td data-th="Price">$1.99</td>
+              <td data-th="Quantity">
+                <input type="number" class="form-control text-center" value="1">
+              </td>
+              <td data-th="Subtotal" class="text-center">1.99</td>
+              <td class="actions" data-th="">
+                <button class="btn btn-info btn-sm"><i class="fa fa-refresh"></i></button>
+                <button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>
+              </td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr class="d-block d-sm-none">
+              <td class="text-center"><strong>Total 1.99</strong></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td colspan="2" class=""></td>
+              <td class="d-none d-sm-block text-center" colspan="2"><strong>Total $1.99</strong></td>
+              <td></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12 col-md-12">
+
+        <div class="card">
+          <h5 class="card-header">Payment Details</h5>
+          <div class="card-body">
+            <form role="form">
+              <div class="d-block ">
+                <div class="custom-control custom-radio">
+                  <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
+                  <label class="custom-control-label" for="credit">Credit card</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
+                  <label class="custom-control-label" for="debit">Debit card</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
+                  <label class="custom-control-label" for="paypal">Paypal</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="cc-name">Name on card</label>
+                  <input type="text" class="form-control" id="cc-name" placeholder="" required>
+                  <small class="text-muted">Full name as displayed on card</small>
+                  <div class="invalid-feedback">
+                    Name on card is required
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="cc-number">Credit card number</label>
+                  <input type="text" class="form-control" id="cc-number" placeholder="" required>
+                  <div class="invalid-feedback">
+                    Credit card number is required
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-3 mb-3">
+                  <label for="cc-expiration">Expiration</label>
+                  <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+                  <div class="invalid-feedback">
+                    Expiration date required
+                  </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <label for="cc-expiration">CVV</label>
+                  <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+                  <div class="invalid-feedback">
+                    Security code required
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="row mt-4">
+          <div class="col-xs-12 col-md-3">
+            <a href="index.html" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a>
+          </div>
+          <div class="col-md-6 d-none d-sm-block "></div>
+          <div class="col-xs-12 col-md-3 text-right">
+            <a href="thanks.html" class="btn btn-secondary">Give Order <i class="fa fa-angle-right"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  <footer class="footer shadow">
+    <div class="container">
+      <span class="text-muted text-right">&copy;2019 Pizza Order App</span>
+    </div>
+  </footer>
+
+
+
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+  integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.12.0/js/all.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.12.0/js/v4-shims.js"></script>
+
+</html>

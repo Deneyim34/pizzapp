@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\html",
+    "\\src",
+    "\\src\\pizza-api-ui",
+    "\\src\\pizza-api-ui\\src",
+    "\\src\\pizza-api-ui\\src\\components",
+    "\\src\\pizza-api-ui\\src\\router",
+    "\\src\\pizza-api-ui\\src\\store",
+    "\\src\\pizza-api-ui\\src\\views"
+  ],
+  "SelectedNode": "\\src\\pizza-api-ui\\src\\components\\Login.vue",
+  "PreviewInSolutionExplorer": false
+}

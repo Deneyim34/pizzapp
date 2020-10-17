@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pizza Order App | Login</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      background-color: #f5f5f5;
+    }
+
+    .gallery-wrap .img-big-wrap img {
+      height: 305px;
+      width: auto;
+      display: inline-block;
+      cursor: zoom-in;
+      margin: 5px;
+    }
+
+
+    .gallery-wrap .img-small-wrap .item-gallery {
+      width: 64px;
+      height: 64px;
+      border: 1px solid #ddd;
+      margin: 7px 2px;
+      display: inline-block;
+      overflow: hidden;
+    }
+
+    .gallery-wrap .img-small-wrap {
+      text-align: center;
+    }
+
+    .gallery-wrap .img-small-wrap img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+      border-radius: 4px;
+      cursor: zoom-in;
+    }
+
+    .footer {
+      position: fixed;
+      bottom: 0px;
+      width: 100%;
+      height: 60px;
+      line-height: 60px;
+      /* Vertically center the text there */
+      background-color: #f5f5f5;
+    }
+
+
+    /* Custom page CSS
+-------------------------------------------------- */
+    /* Not required for template or sticky footer method. */
+
+
+    .footer .container {
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container" style="padding-bottom: 100px;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow mt-2 rounded">
+      <a class="navbar-brand" href="#">Pizza Order App</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+
+
+        <div class="btn-group ml-auto">
+          <a type="button" class="btn dropdown-toggle " data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu  dropdown-menu-right p-2" style="min-width: 400px;">
+            <div class="card bg-light mb-3 shadow">
+              <div class="card-header">Cart</div>
+              <div class="card-body pb-0">
+                <div style="max-height: 240px; overflow: auto;">
+                  <table class="table">
+                    <tbody>
+                      <tr>
+                        <th scope="row" style="width: 50px;" class="align-middle"><img src="" alt="" width="48"
+                            height="48" class="border rounded "></th>
+                        <td class="align-middle" style="width: 200px;">Mark</td>
+                        <td class="align-middle text-right" style="width: 100px;"> 25.00 TL </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" style="width: 50px;"><img src="" alt="" width="48" height="48"
+                            class="border rounded "></th>
+                        <td class="align-middle" style="width: 200px;">Mark</td>
+                        <td class="align-middle text-right" style="width: 100px;"> 25.00 TL </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" style="width: 50px;"><img src="" alt="" width="48" height="48"
+                            class="border rounded "></th>
+                        <td class="align-middle" style="width: 200px;">Mark</td>
+                        <td class="align-middle text-right" style="width: 100px;"> 25.00 TL </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <th colspan="2" class="align-middle text-right">Total Price</th>
+                      <td class="align-middle text-right" style="width: 100px;">75.00 TL</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <a href="cart.html" class="btn btn-lg btn-secondary btn-block" style="color:#f5f5f5;"><i
+                class="fa fa-check-circle"></i> Give
+              Order </a>
+          </div>
+          <div class="btn-group">
+            <a type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              <i class="fa fa-user-circle" aria-hidden="true"></i>
+            </a>
+            <div class="dropdown-menu  dropdown-menu-right">
+              <a class="dropdown-item" href="profile.html"><i class="fa fa-user-cog" aria-hidden="true"></i> Account
+                Settings</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="login.html"><i class="fa fa-sign-out" aria-hidden="true"></i> Sign Out</a>
+            </div>
+          </div>
+
+          <a href="login.html" type="button" class="btn"><i class="fa fa-sign-in" aria-hidden="true"></i> Sign In</a
+            href="login.html">
+            
+        </div>
+
+      </div>
+    </nav>
+
+    <div class="card bg-light mb-3 shadow mt-4">
+      <div class="card-header h4">
+        <div class="float-left">Previous Orders</div>
+        <form class="form-inline my-2 my-lg-0 float-right">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+      <div class="card-body pt-0 pb-0">
+
+        <table class="table">
+          <tbody>
+            <tr>
+              <th scope="row" style="width: 50px;" class="align-middle">2131654613</th>
+              <td class="align-middle">
+                <div class="float-left p-2 m-1 border"> 2x <img src="http://placehold.it/48x48" alt="" width="48"
+                    height="48" class="border rounded "> Chicago <span class="badge badge-secondary">L</span></div>
+                <div class="float-left p-2 m-1 border"> 2x <img src="http://placehold.it/48x48" alt="" width="48"
+                    height="48" class="border rounded "> Chicago <span class="badge badge-secondary">L</span></div>
+                <div class="float-left p-2 m-1 border"> 2x <img src="http://placehold.it/48x48" alt="" width="48"
+                    height="48" class="border rounded "> Chicago <span class="badge badge-secondary">L</span></div>
+                <div class="float-left p-2 m-1 border"> 2x <img src="http://placehold.it/48x48" alt="" width="48"
+                    height="48" class="border rounded "> Chicago <span class="badge badge-secondary">L</span></div>
+              </td>
+              <td class="align-middle" style="width: 150px;">25/12/2019 18:56</td>
+              <td class="align-middle" style="width: 70px;"><span class="badge badge-success">Delivered</span></td>
+              <td class="align-middle text-right" style="width: 100px;"> 25.00 TL </td>
+              <td class="align-middle text-right" style="width: 150px;"><a href="#"
+                  class="btn btn-secondary btn-block"><i class="fa fa-cart-plus" aria-hidden="true"></i> Re-Order</a>
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row" style="width: 50px;" class="align-middle">2131654613</th>
+              <td class="align-middle">
+                <div class="float-left p-2 m-1 border"> 2x <img src="http://placehold.it/48x48" alt="" width="48"
+                    height="48" class="border rounded "> Chicago <span class="badge badge-secondary">L</span></div>
+                <div class="float-left p-2 m-1 border"> 2x <img src="http://placehold.it/48x48" alt="" width="48"
+                    height="48" class="border rounded "> Chicago <span class="badge badge-secondary">L</span></div>
+                <div class="float-left p-2 m-1 border"> 2x <img src="http://placehold.it/48x48" alt="" width="48"
+                    height="48" class="border rounded "> Chicago <span class="badge badge-secondary">L</span></div>
+                <div class="float-left p-2 m-1 border"> 2x <img src="http://placehold.it/48x48" alt="" width="48"
+                    height="48" class="border rounded "> Chicago <span class="badge badge-secondary">L</span></div>
+              </td>
+              <td class="align-middle" style="width: 150px;">25/12/2019 18:56</td>
+              <td class="align-middle" style="width: 70px;"><span class="badge badge-success">Delivered</span></td>
+              <td class="align-middle text-right" style="width: 100px;"> 25.00 TL </td>
+              <td class="align-middle text-right" style="width: 150px;"><a href="#"
+                  class="btn btn-secondary btn-block"><i class="fa fa-cart-plus" aria-hidden="true"></i> Re-Order</a>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row" style="width: 50px;" class="align-middle">2131654613</th>
+              <td class="align-middle">
+                <div class="float-left p-2 m-1 border"> 2x <img src="http://placehold.it/48x48" alt="" width="48"
+                    height="48" class="border rounded "> Chicago <span class="badge badge-secondary">L</span></div>
+                <div class="float-left p-2 m-1 border"> 2x <img src="http://placehold.it/48x48" alt="" width="48"
+                    height="48" class="border rounded "> Chicago <span class="badge badge-secondary">L</span></div>
+                <div class="float-left p-2 m-1 border"> 2x <img src="http://placehold.it/48x48" alt="" width="48"
+                    height="48" class="border rounded "> Chicago <span class="badge badge-secondary">L</span></div>
+                <div class="float-left p-2 m-1 border"> 2x <img src="http://placehold.it/48x48" alt="" width="48"
+                    height="48" class="border rounded "> Chicago <span class="badge badge-secondary">L</span></div>
+              </td>
+              <td class="align-middle" style="width: 150px;">25/12/2019 18:56</td>
+              <td class="align-middle" style="width: 70px;"><span class="badge badge-success">Delivered</span></td>
+              <td class="align-middle text-right" style="width: 100px;"> 25.00 TL </td>
+              <td class="align-middle text-right" style="width: 150px;"><a href="#"
+                  class="btn btn-secondary btn-block"><i class="fa fa-cart-plus" aria-hidden="true"></i> Re-Order</a>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row" style="width: 50px;" class="align-middle">2131654613</th>
+              <td class="align-middle">
+                <div class="float-left p-2 m-1 border"> 2x <img src="http://placehold.it/48x48" alt="" width="48"
+                    height="48" class="border rounded "> Chicago <span class="badge badge-secondary">L</span></div>
+                <div class="float-left p-2 m-1 border"> 2x <img src="http://placehold.it/48x48" alt="" width="48"
+                    height="48" class="border rounded "> Chicago <span class="badge badge-secondary">L</span></div>
+                <div class="float-left p-2 m-1 border"> 2x <img src="http://placehold.it/48x48" alt="" width="48"
+                    height="48" class="border rounded "> Chicago <span class="badge badge-secondary">L</span></div>
+                <div class="float-left p-2 m-1 border"> 2x <img src="http://placehold.it/48x48" alt="" width="48"
+                    height="48" class="border rounded "> Chicago <span class="badge badge-secondary">L</span></div>
+              </td>
+              <td class="align-middle" style="width: 150px;">25/12/2019 18:56</td>
+              <td class="align-middle" style="width: 70px;"><span class="badge badge-success">Delivered</span></td>
+              <td class="align-middle text-right" style="width: 100px;"> 25.00 TL </td>
+              <td class="align-middle text-right" style="width: 150px;"><a href="#"
+                  class="btn btn-secondary btn-block"><i class="fa fa-cart-plus" aria-hidden="true"></i> Re-Order</a>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row" style="width: 50px;" class="align-middle">2131654613</th>
+              <td class="align-middle">
+                <div class="float-left p-2 m-1 border"> 2x <img src="http://placehold.it/48x48" alt="" width="48"
+                    height="48" class="border rounded "> Chicago <span class="badge badge-secondary">L</span></div>
+                <div class="float-left p-2 m-1 border"> 2x <img src="http://placehold.it/48x48" alt="" width="48"
+                    height="48" class="border rounded "> Chicago <span class="badge badge-secondary">L</span></div>
+                <div class="float-left p-2 m-1 border"> 2x <img src="http://placehold.it/48x48" alt="" width="48"
+                    height="48" class="border rounded "> Chicago <span class="badge badge-secondary">L</span></div>
+                <div class="float-left p-2 m-1 border"> 2x <img src="http://placehold.it/48x48" alt="" width="48"
+                    height="48" class="border rounded "> Chicago <span class="badge badge-secondary">L</span></div>
+              </td>
+              <td class="align-middle" style="width: 150px;">25/12/2019 18:56</td>
+              <td class="align-middle" style="width: 70px;"><span class="badge badge-success">Delivered</span></td>
+              <td class="align-middle text-right" style="width: 100px;"> 25.00 TL </td>
+              <td class="align-middle text-right" style="width: 150px;"><a href="#"
+                  class="btn btn-secondary btn-block"><i class="fa fa-cart-plus" aria-hidden="true"></i> Re-Order</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+
+      <div class="card-footer text-muted">
+        <nav aria-label="Page navigation example">
+          <ul class="pagination justify-content-end">
+            <li class="page-item disabled">
+              <a class="page-link" href="#" tabindex="-1">Previous</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#">Next</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+
+
+    <div class="card bg-light mb-3 shadow mt-4">
+      <div class="card-header h4">
+        <div class="float-left">Pizza Collection</div>
+        <form class="form-inline my-2 my-lg-0 float-right">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+      <div class="card-body pt-0">
+        <div class="row">
+          <div class="col-md-3 mt-4">
+            <div class="card shadow">
+              <img class="card-img-top" src="http://placehold.it/286x180" alt="Card image cap" width="286" height="180">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+              </div>
+              <ul class="list-group list-group-flush border-top">
+                <li class="list-group-item text-center"><i class="fa fa-money" aria-hidden="true"></i> 25.00 TL</li>
+                <li class="list-group-item"><a href="#" class="btn btn-secondary btn-block" data-toggle="modal"
+                    data-target="#exampleModalLong"><i class="fa fa-cart-plus" aria-hidden="true"></i> Add To Cart</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3 mt-4">
+            <div class="card shadow">
+              <img class="card-img-top" src="http://placehold.it/286x180" alt="Card image cap" width="286" height="180">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+              </div>
+              <ul class="list-group list-group-flush border-top">
+                <li class="list-group-item text-center"><i class="fa fa-money" aria-hidden="true"></i> 25.00 TL</li>
+                <li class="list-group-item"><a href="#" class="btn btn-secondary btn-block" data-toggle="modal"
+                    data-target="#exampleModalLong"><i class="fa fa-cart-plus" aria-hidden="true"></i> Add To Cart</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3 mt-4">
+            <div class="card  shadow">
+              <img class="card-img-top" src="http://placehold.it/286x180" alt="Card image cap" width="286" height="180">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+              </div>
+              <ul class="list-group list-group-flush border-top">
+                <li class="list-group-item text-center"><i class="fa fa-money" aria-hidden="true"></i> 25.00 TL</li>
+                <li class="list-group-item"><a href="#" class="btn btn-secondary btn-block" data-toggle="modal"
+                    data-target="#exampleModalLong"><i class="fa fa-cart-plus" aria-hidden="true"></i> Add To Cart</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3 mt-4">
+            <div class="card shadow">
+              <img class="card-img-top" src="http://placehold.it/286x180" alt="Card image cap" width="286" height="180">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+              </div>
+              <ul class="list-group list-group-flush border-top">
+                <li class="list-group-item text-center"><i class="fa fa-money" aria-hidden="true"></i> 25.00 TL</li>
+                <li class="list-group-item"><a href="#" class="btn btn-secondary btn-block" data-toggle="modal"
+                    data-target="#exampleModalLong"><i class="fa fa-cart-plus" aria-hidden="true"></i> Add To Cart</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md-3 mt-4">
+            <div class="card shadow">
+              <img class="card-img-top" src="http://placehold.it/286x180" alt="Card image cap" width="286" height="180">
+              <div class="card-body mb-0">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+              </div>
+              <ul class="list-group list-group-flush border-top">
+                <li class="list-group-item text-center"><i class="fa fa-money" aria-hidden="true"></i> 25.00 TL</li>
+                <li class="list-group-item"><a href="#" class="btn btn-secondary btn-block" data-toggle="modal"
+                    data-target="#exampleModalLong"><i class="fa fa-cart-plus" aria-hidden="true"></i> Add To Cart</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="card-footer text-muted">
+        <nav aria-label="Page navigation example">
+          <ul class="pagination justify-content-end">
+            <li class="page-item disabled">
+              <a class="page-link" href="#" tabindex="-1">Previous</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#">Next</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+    </div>
+
+
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Extravaganza</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+          <div class="card">
+            <div class="row">
+              <aside class="col-sm-5 border-right">
+                <article class="gallery-wrap">
+                  <div class="img-big-wrap">
+                    <div> <a href="#"><img src="http://placehold.it/300x300" class="img-responsive"></a></div>
+                  </div> <!-- slider-product.// -->
+                  <div class="img-small-wrap">
+                    <div class="item-gallery"> <img src="http://placehold.it/64x64"> </div>
+                    <div class="item-gallery"> <img src="http://placehold.it/64x64"> </div>
+                    <div class="item-gallery"> <img src="http://placehold.it/64x64"> </div>
+                    <div class="item-gallery"> <img src="http://placehold.it/64x64"> </div>
+                  </div> <!-- slider-nav.// -->
+                </article> <!-- gallery-wrap .end// -->
+              </aside>
+              <aside class="col-sm-7">
+                <article class="card-body p-5">
+                  <h3 class="title mb-3">Extravaganza</h3>
+
+                  <p class="price-detail-wrap">
+                    <span class="price h3 text-warning">
+                      <span class="currency">US $</span><span class="num">25</span>
+                    </span>
+                    <span>/per </span>
+                  </p> <!-- price-detail-wrap .// -->
+                  <dl class="item-property">
+                    <dt>Description</dt>
+                    <dd>
+                      <p>Here goes description consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco </p>
+                    </dd>
+                  </dl>
+                  
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-5">
+                      <dl class="param param-inline">
+                        <dt>Quantity: </dt>
+                        <dd>
+                          <input type="number" class="form-control text-center" value="1">
+                        </dd>
+                      </dl> <!-- item-property .// -->
+                    </div> <!-- col.// -->
+                    <div class="col-sm-7">
+                      <dl class="param param-inline">
+                        <dt>Size: </dt>
+                        <dd>
+                          <label class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                              value="option2">
+                            <span class="form-check-label">S</span>
+                          </label>
+                          <label class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                              value="option2">
+                            <span class="form-check-label">M</span>
+                          </label>
+                          <label class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                              value="option2">
+                            <span class="form-check-label">L</span>
+                          </label>
+                        </dd>
+                      </dl> <!-- item-property .// -->
+                    </div> <!-- col.// -->
+                  </div> <!-- row.// -->
+                  <hr>
+                  <a href="#" class="btn btn-lg btn-secondary text-uppercase"> Buy now </a>
+                  <a href="#" class="btn btn-lg btn-outline-secondary text-uppercase"> <i
+                      class="fas fa-shopping-cart"></i> Add to cart </a>
+                </article> <!-- card-body.// -->
+              </aside> <!-- col.// -->
+            </div> <!-- row.// -->
+          </div> <!-- card.// -->
+
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer shadow">
+    <div class="container">
+      <span class="text-muted text-right">&copy;2019 Pizza Order App</span>
+    </div>
+  </footer>
+
+
+
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+  integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.12.0/js/all.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.12.0/js/v4-shims.js"></script>
+
+</html>

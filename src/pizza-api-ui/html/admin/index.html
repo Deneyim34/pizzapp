@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pizza Order App Admin | Dashboard</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      background-color: #f5f5f5;
+    }
+
+    .footer {
+      position: fixed;
+      bottom: 0px;
+      width: 100%;
+      height: 60px;
+      line-height: 60px;
+      /* Vertically center the text there */
+      background-color: #f5f5f5;
+    }
+
+
+    /* Custom page CSS
+-------------------------------------------------- */
+    /* Not required for template or sticky footer method. */
+
+
+    .footer .container {
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container" style="padding-bottom: 100px;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow mt-2 rounded">
+      <a class="navbar-brand" href="#">Pizza Order App Admin</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Dashboard <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pizzas.html">Pizza Collection</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="orders.html">Orders</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="customers.html">Customers</a>
+          </li>
+        </ul>
+
+        <div class="btn-group ml-auto">
+          <div class="btn-group">
+            <a type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              <i class="fa fa-user-circle" aria-hidden="true"></i>
+            </a>
+            <div class="dropdown-menu  dropdown-menu-right">
+              <a class="dropdown-item" href="profile.html"><i class="fa fa-user-cog" aria-hidden="true"></i> Account
+                Settings</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="login.html"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </nav>
+
+    <div class="card bg-light mb-3 shadow mt-4">
+      <div class="card-header h4">
+        <div class="float-left">Last Customers</div>
+        <a href="customers.html"  class="btn btn-outline-secondary my-2 my-sm-0 float-right">All Customers</a href="customers.html">
+        <a href="customer.html" class="btn btn-outline-secondary my-2 my-sm-0 float-right mr-2"><i class="fa fa-plus" aria-hidden="true"></i> New</a>
+      </div>
+      <div class="card-body pt-0 pb-0">
+
+        <table class="table">
+          <thead>
+            <th scope="row">Name</thscope="row">
+            <th>E-Mail</th>
+            <th>Created At</th>
+            <th>District</th>
+            <th>City</th>
+            <th>Country</th>
+            <th style="width: 150px;">&nbsp;</th>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" class="align-middle">Fred Morgen</th>
+              <td class="align-middle">fred.morgen@dc.com</td>
+              <td class="align-middle">25/12/2019 18:56</td>
+              <td class="align-middle">Kadıköy</td>
+              <td class="align-middle">Istanbul</td>
+              <td class="align-middle">Turkey</td>
+              <td class="align-middle text-right" style="width: 150px;">
+                <a href="#" class="btn btn-danger float-right"><i class="fa fa-remove" aria-hidden="true"></i></a>
+                <a href="customer.html" class="btn btn-warning float-right mr-2"><i class="fa fa-edit" aria-hidden="true"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row" class="align-middle">Fred Morgen</th>
+              <td class="align-middle">fred.morgen@dc.com</td>
+              <td class="align-middle">25/12/2019 18:56</td>
+              <td class="align-middle">Kadıköy</td>
+              <td class="align-middle">Istanbul</td>
+              <td class="align-middle">Turkey</td>
+              <td class="align-middle text-right" style="width: 150px;">
+                <a href="#" class="btn btn-danger float-right"><i class="fa fa-remove" aria-hidden="true"></i></a>
+                <a href="customer.html" class="btn btn-warning float-right mr-2"><i class="fa fa-edit" aria-hidden="true"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row" class="align-middle">Fred Morgen</th>
+              <td class="align-middle">fred.morgen@dc.com</td>
+              <td class="align-middle">25/12/2019 18:56</td>
+              <td class="align-middle">Kadıköy</td>
+              <td class="align-middle">Istanbul</td>
+              <td class="align-middle">Turkey</td>
+              <td class="align-middle text-right" style="width: 150px;">
+                <a href="#" class="btn btn-danger float-right"><i class="fa fa-remove" aria-hidden="true"></i></a>
+                <a href="customer.html" class="btn btn-warning float-right mr-2"><i class="fa fa-edit" aria-hidden="true"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row" class="align-middle">Fred Morgen</th>
+              <td class="align-middle">fred.morgen@dc.com</td>
+              <td class="align-middle">25/12/2019 18:56</td>
+              <td class="align-middle">Kadıköy</td>
+              <td class="align-middle">Istanbul</td>
+              <td class="align-middle">Turkey</td>
+              <td class="align-middle text-right" style="width: 150px;">
+                <a href="#" class="btn btn-danger float-right"><i class="fa fa-remove" aria-hidden="true"></i></a>
+                <a href="customer.html" class="btn btn-warning float-right mr-2"><i class="fa fa-edit" aria-hidden="true"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row" class="align-middle">Fred Morgen</th>
+              <td class="align-middle">fred.morgen@dc.com</td>
+              <td class="align-middle">25/12/2019 18:56</td>
+              <td class="align-middle">Kadıköy</td>
+              <td class="align-middle">Istanbul</td>
+              <td class="align-middle">Turkey</td>
+              <td class="align-middle text-right" style="width: 150px;">
+                <a href="#" class="btn btn-danger float-right"><i class="fa fa-remove" aria-hidden="true"></i></a>
+                <a href="customer.html" class="btn btn-warning float-right mr-2"><i class="fa fa-edit" aria-hidden="true"></i></a>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+
+      </div>
+
+    </div>
+
+    <div class="card bg-light mb-3 shadow mt-4">
+      <div class="card-header h4">
+        <div class="float-left">Last Orders</div>
+        <a href="orders.html"  class="btn btn-outline-secondary my-2 my-sm-0 float-right">All Orders</a>
+      </div>
+      <div class="card-body pt-0 pb-0">
+
+        <table class="table">
+          <tbody>
+            <tr>
+              <th scope="row" style="width: 50px;" class="align-middle">2131654613</th>
+              <td class="align-middle">
+                <div class="float-left p-2 m-1 border"> 2x <img src="http://placehold.it/48x48" alt="" width="48"
+                    height="48" class="border rounded "> Chicago <span class="badge badge-secondary">L</span></div>
+                <div class="float-left p-2 m-1 border"> 2x <img src="http://placehold.it/48x48" alt="" width="48"
+                    height="48" class="border rounded "> Chicago <span class="badge badge-secondary">L</span></div>
+                <div class="float-left p-2 m-1 border"> 2x <img src="http://placehold.it/48x48" alt="" width="48"
+                    height="48" class="border rounded "> Chicago <span class="badge badge-secondary">L</span></div>
+                <div class="float-left p-2 m-1 border"> 2x <img src="http://placehold.it/48x48" alt="" width="48"
+                    height="48" class="border rounded "> Chicago <span class="badge badge-secondary">L</span></div>
+              </td>
+              <td class="align-middle" style="width: 150px;">25/12/2019 18:56</td>
+              <td class="align-middle" style="width: 150px;">
+                <select class="form-control custom-select roundless-input" id="inputCountry" required>
+                  <option selected>Delivered</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </td>
+              <td class="align-middle text-right" style="width: 100px;"> 25.00 TL </td>
+              <td class="align-middle text-right" style="width: 50px;"><a href="#" class="btn btn-danger"><i
+                    class="fa fa-remove" aria-hidden="true"></i></a>
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row" style="width: 50px;" class="align-middle">2131654613</th>
+              <td class="align-middle">
+                <div class="float-left p-2 m-1 border"> 2x <img src="http://placehold.it/48x48" alt="" width="48"
+                    height="48" class="border rounded "> Chicago <span class="badge badge-secondary">L</span></div>
+                <div class="float-left p-2 m-1 border"> 2x <img src="http://placehold.it/48x48" alt="" width="48"
+                    height="48" class="border rounded "> Chicago <span class="badge badge-secondary">L</span></div>
+                <div class="float-left p-2 m-1 border"> 2x <img src="http://placehold.it/48x48" alt="" width="48"
+                    height="48" class="border rounded "> Chicago <span class="badge badge-secondary">L</span></div>
+                <div class="float-left p-2 m-1 border"> 2x <img src="http://placehold.it/48x48" alt="" width="48"
+                    height="48" class="border rounded "> Chicago <span class="badge badge-secondary">L</span></div>
+              </td>
+              <td class="align-middle" style="width: 150px;">25/12/2019 18:56</td>
+              <td class="align-middle" style="width: 150px;">
+                <select class="form-control custom-select roundless-input" id="inputCountry" required>
+                  <option selected>Delivered</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </td>
+              <td class="align-middle text-right" style="width: 100px;"> 25.00 TL </td>
+              <td class="align-middle text-right" style="width: 50px;"><a href="#" class="btn btn-danger"><i
+                    class="fa fa-remove" aria-hidden="true"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row" style="width: 50px;" class="align-middle">2131654613</th>
+              <td class="align-middle">
+                <div class="float-left p-2 m-1 border"> 2x <img src="http://placehold.it/48x48" alt="" width="48"
+                    height="48" class="border rounded "> Chicago <span class="badge badge-secondary">L</span></div>
+                <div class="float-left p-2 m-1 border"> 2x <img src="http://placehold.it/48x48" alt="" width="48"
+                    height="48" class="border rounded "> Chicago <span class="badge badge-secondary">L</span></div>
+                <div class="float-left p-2 m-1 border"> 2x <img src="http://placehold.it/48x48" alt="" width="48"
+                    height="48" class="border rounded "> Chicago <span class="badge badge-secondary">L</span></div>
+                <div class="float-left p-2 m-1 border"> 2x <img src="http://placehold.it/48x48" alt="" width="48"
+                    height="48" class="border rounded "> Chicago <span class="badge badge-secondary">L</span></div>
+              </td>
+              <td class="align-middle" style="width: 150px;">25/12/2019 18:56</td>
+              <td class="align-middle" style="width: 150px;">
+                <select class="form-control custom-select roundless-input" id="inputCountry" required>
+                  <option selected>Delivered</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </td>
+              <td class="align-middle text-right" style="width: 100px;"> 25.00 TL </td>
+              <td class="align-middle text-right" style="width: 50px;"><a href="#" class="btn btn-danger"><i
+                    class="fa fa-remove" aria-hidden="true"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row" style="width: 50px;" class="align-middle">2131654613</th>
+              <td class="align-middle">
+                <div class="float-left p-2 m-1 border"> 2x <img src="http://placehold.it/48x48" alt="" width="48"
+                    height="48" class="border rounded "> Chicago <span class="badge badge-secondary">L</span></div>
+                <div class="float-left p-2 m-1 border"> 2x <img src="http://placehold.it/48x48" alt="" width="48"
+                    height="48" class="border rounded "> Chicago <span class="badge badge-secondary">L</span></div>
+                <div class="float-left p-2 m-1 border"> 2x <img src="http://placehold.it/48x48" alt="" width="48"
+                    height="48" class="border rounded "> Chicago <span class="badge badge-secondary">L</span></div>
+                <div class="float-left p-2 m-1 border"> 2x <img src="http://placehold.it/48x48" alt="" width="48"
+                    height="48" class="border rounded "> Chicago <span class="badge badge-secondary">L</span></div>
+              </td>
+              <td class="align-middle" style="width: 150px;">25/12/2019 18:56</td>
+              <td class="align-middle" style="width: 150px;">
+                <select class="form-control custom-select roundless-input" id="inputCountry" required>
+                  <option selected>Delivered</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </td>
+              <td class="align-middle text-right" style="width: 100px;"> 25.00 TL </td>
+              <td class="align-middle text-right" style="width: 50px;"><a href="#" class="btn btn-danger"><i
+                    class="fa fa-remove" aria-hidden="true"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row" style="width: 50px;" class="align-middle">2131654613</th>
+              <td class="align-middle">
+                <div class="float-left p-2 m-1 border"> 2x <img src="http://placehold.it/48x48" alt="" width="48"
+                    height="48" class="border rounded "> Chicago <span class="badge badge-secondary">L</span></div>
+                <div class="float-left p-2 m-1 border"> 2x <img src="http://placehold.it/48x48" alt="" width="48"
+                    height="48" class="border rounded "> Chicago <span class="badge badge-secondary">L</span></div>
+                <div class="float-left p-2 m-1 border"> 2x <img src="http://placehold.it/48x48" alt="" width="48"
+                    height="48" class="border rounded "> Chicago <span class="badge badge-secondary">L</span></div>
+                <div class="float-left p-2 m-1 border"> 2x <img src="http://placehold.it/48x48" alt="" width="48"
+                    height="48" class="border rounded "> Chicago <span class="badge badge-secondary">L</span></div>
+              </td>
+              <td class="align-middle" style="width: 150px;">25/12/2019 18:56</td>
+              <td class="align-middle" style="width: 150px;">
+                <select class="form-control custom-select roundless-input" id="inputCountry" required>
+                  <option selected>Delivered</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </td>
+              <td class="align-middle text-right" style="width: 100px;"> 25.00 TL </td>
+              <td class="align-middle text-right" style="width: 50px;"><a href="#" class="btn btn-danger"><i
+                    class="fa fa-remove" aria-hidden="true"></i></a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+
+    
+  </div>
+
+
+
+  <footer class="footer shadow">
+    <div class="container">
+      <span class="text-muted text-right">&copy;2019 Pizza Order App</span>
+    </div>
+  </footer>
+
+
+
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+  integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.12.0/js/all.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.12.0/js/v4-shims.js"></script>
+
+</html>
